@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulces Pétalos | Floristería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 min-h-screen flex flex-col">
+
+    <header class="bg-[#fce4ec] shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="location.reload()">
+                <span class="text-2xl">🌸</span>
+                <h1 class="text-2xl font-caligrafia text-rose-400">Dulces Pétalos</h1>
+            </div>
+
+            <nav class="hidden md:flex gap-6">
+                <a href="#" onclick="mostrarPortada(todasLasFlores)" class="text-stone-600 hover:text-rose-500 font-medium tracking-wide transition">Inicio</a>
+                <a href="#listado" class="text-stone-600 hover:text-rose-500 font-medium tracking-wide transition">Listado de Flores</a>
+            </nav>
+
+            <div class="flex md:hidden gap-4">
+                <button onclick="mostrarPortada(todasLasFlores)" class="text-rose-400">🏠</button>
+                <button class="text-rose-400">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-10 bg-white">
+        <div class="max-w-md mx-auto px-6 text-center">
+            <h2 class="font-serif italic text-stone-500 mb-4 text-xl">Nuestra Colección</h2>
+            <input type="text" id="buscador" placeholder="Buscar por nombre..." 
+                   class="w-full p-4 rounded-full border border-rose-100 bg-stone-50 focus:ring-2 focus:ring-rose-200 outline-none text-center italic transition-all">
+        </div>
+    </section>
+
+    <main id="contenedor-flores" class="flex-grow p-6 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        </main>
+
+    <footer class="bg-white border-t border-rose-100 py-12 px-6 mt-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+            
+            <div class="flex flex-col items-center md:items-start space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🌸</span>
+                    <span class="font-caligrafia text-2xl text-rose-400">Dulces Pétalos</span>
+                </div>
+                <div class="text-stone-500 text-sm text-center md:text-left leading-relaxed">
+                    <p>📍 Calle de la Flor, 12, Noáin</p>
+                    <p>📞 +34 600 000 000</p>
+                    <p>✉️ hola@dulcespetalos.com</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="font-bold text-stone-800 mb-4 uppercase text-xs tracking-widest">Menú</h3>
+                <ul class="text-stone-500 text-sm space-y-2 text-center md:text-left">
+                    <li><a href="#" onclick="mostrarPortada(todasLasFlores)" class="hover:text-rose-400">Inicio</a></li>
+                    <li><a href="#listado" class="hover:text-rose-400">Listado de Flores</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="font-bold text-stone-800 mb-4 uppercase text-xs tracking-widest">Información</h3>
+                <ul class="text-stone-500 text-sm space-y-2 text-center md:text-left">
+                    <li><a href="#" class="hover:text-rose-400">Política de Privacidad</a></li>
+                    <li><a href="#" class="hover:text-rose-400">Términos y Condiciones</a></li>
+                    <li><a href="#" class="hover:text-rose-400">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 pt-6 border-t border-stone-100 text-[10px] text-stone-400 uppercase tracking-[0.2em]">
+            &copy; 2026 Dulces Pétalos - Boutique Floral Online
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

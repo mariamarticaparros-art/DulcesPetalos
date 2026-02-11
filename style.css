@@ -1,0 +1,59 @@
+.font-caligrafia { font-family: 'Dancing Script', cursive; }
+body { font-family: 'Montserrat', sans-serif; }
+h2, .font-serif { font-family: 'Playfair Display', serif; }
+
+/* AJUSTE DE IMÁGENES PARA QUE NO SE DEFORMEN */
+.flor-img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Cuadradas */
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f9f8f8;
+}
+
+.flor-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace el resize mágico */
+    transition: transform 0.5s ease;
+}
+
+.flor-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Animación de entrada */
+.animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Ajuste para el Header: Logo izq, Botones der */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer responsivo: Columnas en PC, lista en móvil */
+footer .grid-footer {
+    display: grid;
+    grid-template-columns: 1fr; /* Móvil: una sola columna */
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    footer .grid-footer {
+        grid-template-columns: repeat(3, 1fr); /* PC: 3 columnas */
+    }
+}
+
+/* Para que las imágenes no se deformen en el móvil */
+.flor-img-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Mantiene la proporción sin estirar */
+}
