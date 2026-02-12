@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulces Petalos | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="inicio">
+  <div class="page-wrap">
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="index.html" aria-label="Ir al inicio">
+          <img src="imgs/logo.svg" alt="Logo Dulces Petalos" />
+          <p>Dulces Petalos</p>
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" />
+        <label for="menu-toggle" class="menu-btn" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="site-nav" aria-label="Menu principal">
+          <a class="nav-link" data-nav="inicio" href="index.html">Inicio</a>
+          <a class="nav-link" data-nav="listado-flores" href="listado-flores.html">Listado de flores</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero" aria-label="Imagen destacada de floristeria">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="imgs/portada-grande.jpg" />
+          <source media="(min-width: 640px)" srcset="imgs/portada-media.jpg" />
+          <img src="imgs/portada-peque.jpg" alt="Flores coloridas en una floristeria" />
+        </picture>
+      </section>
+
+      <section class="intro container">
+        <h1>Dulces Petalos</h1>
+        <p>Arreglos florales con estilo, frescura y detalle para cada ocasion.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <img src="imgs/logo.svg" alt="Logo Dulces Petalos" />
+          <p>Dulces Petalos</p>
+        </div>
+
+        <div class="footer-contact">
+          <h2>Contacto</h2>
+          <p>+34 600 000 000</p>
+          <p>contacto@dulcespetalos.com</p>
+          <p>Calle de las Flores, 10</p>
+        </div>
+
+        <div class="footer-pages">
+          <h2>Paginas</h2>
+          <a href="index.html">Inicio</a>
+          <a href="listado-flores.html">Listado de flores</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+          <p>Copyright (c) 2026 - Dulces Petalos</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
