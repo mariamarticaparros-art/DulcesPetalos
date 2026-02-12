@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulces Petalos | Listado de flores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="listado-flores">
+  <div class="page-wrap">
+    <div id="site-header-include"></div>
+
+    <main class="main-content">
+      <section class="flowers-list container">
+        <div id="flowers-list-view">
+          <div class="flowers-toolbar">
+            <h1>Listado de flores</h1>
+            <div class="flowers-search">
+              <input
+                id="flowers-search-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Buscar por nombre o nombre científico"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div id="flowers-feedback" class="empty-list" role="status" aria-live="polite">
+            <p>Cargando flores...</p>
+          </div>
+          <div id="flowers-grid" class="flowers-grid" aria-live="polite"></div>
+        </div>
+
+        <article id="flower-detail-view" class="flower-detail" hidden>
+          <button id="flower-detail-close" class="detail-close" type="button" aria-label="Cerrar detalle">X</button>
+          <div class="flower-detail-layout">
+            <div class="flower-detail-media">
+              <h2 id="flower-detail-title" class="flower-detail-title"></h2>
+              <div class="flower-detail-image-wrap">
+                <img id="flower-detail-image" class="flower-detail-image" src="" alt="" />
+              </div>
+            </div>
+            <section class="flower-detail-description" aria-labelledby="flower-detail-desc-title">
+              <h3 id="flower-detail-desc-title">Descripción del producto</h3>
+              <ul id="flower-detail-list"></ul>
+            </section>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div id="site-footer-include"></div>
+  </div>
+  <script src="shared-layout.js" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>

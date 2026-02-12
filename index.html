@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulces Petalos | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="inicio">
+  <div class="page-wrap">
+    <div id="site-header-include"></div>
+
+    <main class="main-content">
+      <section class="hero" aria-label="Imagen destacada de floristeria">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="imgs/portada-grande.jpg" />
+          <source media="(min-width: 640px)" srcset="imgs/portada-media.jpg" />
+          <img src="imgs/portada-peque.jpg" alt="Flores coloridas en una floristeria" />
+        </picture>
+      </section>
+
+      <section class="intro container">
+        <h1>Dulces Petalos</h1>
+        <p>Arreglos florales con estilo, frescura y detalle para cada ocasión.</p>
+      </section>
+
+      
+      <section class="about-us container" id="quienes-somos" aria-labelledby="about-us-title">
+        <h2 id="about-us-title">Quiénes somos</h2>
+        <p>
+          En Dulces Petalos somos una floristeria familiar nacida en 2018 con una idea simple:
+          convertir cada ramo en un recuerdo. Combinamos flores frescas de temporada, diseño
+          artesanal y atención cercana para bodas, celebraciones y detalles del día a día.
+        </p>
+        <p>
+          Cuidamos cada pedido desde la selección hasta la entrega para que siempre llegue con
+          la mejor presentación, aroma y color.
+        </p>
+      </section>
+      
+      <section class="home-flowers container" aria-labelledby="home-flowers-title">
+        <h2 id="home-flowers-title">Flores destacadas</h2>
+        <div id="home-flowers-feedback" class="empty-list" role="status" aria-live="polite">
+          <p>Cargando flores...</p>
+        </div>
+        <div id="home-flowers-grid" class="flowers-grid" aria-live="polite"></div>
+        <a class="home-more-btn" href="listado-flores.html">Ver mas flores</a>
+      </section>
+
+    </main>
+
+    <div id="site-footer-include"></div>
+  </div>
+  <script src="shared-layout.js" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>
